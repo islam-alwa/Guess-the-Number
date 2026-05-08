@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'PixelGame'; /* الاسم اللي إنت هتختاره للخط */
+    src: url('Pixel Game.otf') format('truetype'); /* مسار الملف */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+   background-color: #27839f; 
+    font-family: PixelGame ;
+    display: grid;
+    place-content: center; /* يضمن توسيط كل المحتويات ككتلة واحدة */
+    min-height: 100vh;
+    margin: 0;
+
+#title {
+   color: #fefefe; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: clamp(40px, 8vw, 70px); /* حجم خط مرن يتناسب مع الموبايل والكمبيوتر */
+    font-weight: bold; /* التصحيح هنا */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#text {
+    color: #0f3460;
+    background: #e94560; 
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+#game  {
+   display: grid;
+    place-items: center;
+    gap: 20px;
+    padding: 30px; /* زيادة التباعد الداخلي لشكل أفخم */
+    background-color: #c63c24;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* إضافة ظل خفيف يعطي عمق */
+}
+
+}
+#instructions{
+    color: aliceblue;
+    font-size: 55px;
+
+
+}
+#guess {
+    border-radius: 50px;
+    font-family: pixelgame;
+    font-size: 25px;
+    padding: 10px;
+    border: none;
+    width: 200px;
+}
+#btns {
+    display: flex;
+    gap: 10px;
+}
+#submit, #new_n {
+   font-family: pixelgame;
+    font-size: 25px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #2299bd;
+    color: white;
+    cursor: pointer;
+}
+#submit:hover, #new_n:hover {
+    background-color: #f0a500; 
+    transform: translateY(-2px);
+}
+#result {
+color: #ffffff; 
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 40px;
+    
+}
+.shadow-dance-text {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    animation: shadow-dance 2s infinite;
+}
+
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    }
+    50% {
+        text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #ff005e;
+    }
+}
+
+.wave-text span {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); } /* قللت الارتفاع عشان الجملة طويلة */
+}
